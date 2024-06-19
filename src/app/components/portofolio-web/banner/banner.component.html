@@ -1,0 +1,25 @@
+<div class="banner-section" id="bannerId">
+    <swiper-container class="banner-swiper" autoplay-delay="2500" autoplay-disable-on-interaction="false" effect="fade">
+        @for (img of listImage; track img){
+        <swiper-slide>
+            <img [src]="img" alt="banner image" class="banner-image">
+        </swiper-slide>
+        } @empty {
+        <swiper-slide>
+            <h1>Data Kosong</h1>
+        </swiper-slide>
+        }
+        <!-- <swiper-slide *ngFor="let img of listImage">
+            <img [src]="img" alt="banner image" class="banner-image">
+        </swiper-slide> -->
+    </swiper-container>
+    <div class="banner-overlay">
+        <div class="banner-layer">
+            <div class="banner-description">
+                <h1>Your School Name</h1>
+                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                <button mat-flat-button class="btn-pendaftaran">Registration PSB 2024/2025</button>
+            </div>
+        </div>
+    </div>
+</div>
